@@ -1,0 +1,22 @@
+<h3 mat-dialog-title>Tambahkan Memo</h3>
+<div mat-dialog-content>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Tanggal</mat-label>
+    <input matInput [(ngModel)]="data.Tanggal">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Jam</mat-label>
+    <input matInput [(ngModel)]="data.Jam">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Perihal</mat-label>
+    <input matInput [(ngModel)]="data.Perihal">
+  </mat-form-field>
+</div>
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close>Batal</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan(data)">Simpan</button>
+</mat-dialog-actions>
